@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Zondax logo" src="./assets/logo.png" width="300" />
+    <img alt="Zondax logo" src="" width="300" />
     <h1>Cosmos integration example</h1>
     <LedgerExample msg="Minimal integration example" />
   </div>

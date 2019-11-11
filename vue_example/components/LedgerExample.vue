@@ -8,17 +8,11 @@
     <!--
         Commands
     -->
-    <button @click="getVersion">
-      Get Version
-    </button>
 
     <button @click="showAddress">
       Show Address
     </button>
 
-    <button @click="signExampleTx">
-      Sign Example TX
-    </button>
     <!--
         Commands
     -->
@@ -43,19 +37,19 @@ export default {
   data() {
     return {
       deviceLog: [],
-      transportChoice: "U2F"
+      transportChoice: "U2F",
     };
   },
   computed: {
     ledgerStatus() {
       return this.deviceLog;
-    }
+    },
   },
   methods: {
     log(msg) {
       this.deviceLog.push({
         index: this.deviceLog.length,
-        msg
+        msg,
       });
     },
     async getTransport() {
@@ -118,9 +112,7 @@ export default {
       }
 
       this.log("Response received!");
-      this.log(
-        `App Version ${response.major}.${response.minor}.${response.patch}`
-      );
+      this.log(`App Version ${response.major}.${response.minor}.${response.patch}`);
       this.log(`Device Locked: ${response.device_locked}`);
       this.log(`Test mode: ${response.test_mode}`);
       this.log("Full response:");
@@ -140,9 +132,7 @@ export default {
       const response = await app.sign(path, message);
 
       this.log("Response received!");
-      this.log(
-        `App Version ${response.major}.${response.minor}.${response.patch}`
-      );
+      this.log(`App Version ${response.major}.${response.minor}.${response.patch}`);
       this.log(`Device Locked: ${response.device_locked}`);
       this.log(`Test mode: ${response.test_mode}`);
       this.log("Full response:");
