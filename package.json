@@ -37,7 +37,7 @@
     "@ledgerhq/logs": "^4.72.0",
     "@vue/cli-plugin-babel": "^4.0.5",
     "@vue/cli-plugin-eslint": "^4.0.5",
-    "@vue/cli-service": "^4.0.5",
+    "@vue/cli-service": "^5.0.8",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "bip32": "2.0.4",
